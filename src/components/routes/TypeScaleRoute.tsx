@@ -1,7 +1,14 @@
 import React, { ReactElement } from 'react'
 
-const TypeScaleRoute = () : ReactElement => {
-  return <h1>Type Scale</h1>
+import RouteWrapper from '../elements/RouteWrapper'
+import RouteHeader from '../elements/RouteHeader'
+
+const TypeScaleRoute = (): ReactElement => {
+    return (
+        <RouteWrapper>
+            <RouteHeader title={'Type Scale'} arrows={true} />
+        </RouteWrapper>
+    )
 }
 
 export default TypeScaleRoute

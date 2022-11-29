@@ -3,12 +3,12 @@ import React, { ReactElement } from 'react'
 import RouteWrapper from '../elements/RouteWrapper'
 import RouteHeader from '../elements/RouteHeader'
 
-const ExportRoute = (): ReactElement => {
+const TypeViewsRoute = (): ReactElement => {
     return (
         <RouteWrapper>
-            <RouteHeader title={'Export'} arrows={false} />
+            <RouteHeader title={'Type Views'} arrows={true} />
         </RouteWrapper>
     )
 }
 
-export default ExportRoute
+export default TypeViewsRoute

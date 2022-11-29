@@ -4,23 +4,23 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import App from './App'
 
 import IndexRoute from './routes/IndexRoute'
-import TypeFamiliesRoute from './routes/TypeFamiliesRoute'
+import TypeViewsRoute from './routes/TypeViewsRoute'
 import TypeScaleRoute from './routes/TypeScaleRoute'
 import ExportRoute from './routes/ExportRoute'
 
-const Root = () : ReactElement => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<App />}>
-          <Route index element={<IndexRoute />} />
-          <Route path='type-families' element={<TypeFamiliesRoute />} />
-          <Route path='type-scale' element={<TypeScaleRoute />} />
-          <Route path='export' element={<ExportRoute />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  )
+const Root = (): ReactElement => {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<App />}>
+                    <Route index element={<IndexRoute />} />
+                    <Route path={'type-views'} element={<TypeViewsRoute />} />
+                    <Route path={'type-scale'} element={<TypeScaleRoute />} />
+                    <Route path={'export'} element={<ExportRoute />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default Root
