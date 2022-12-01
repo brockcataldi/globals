@@ -18,9 +18,10 @@ const InputSelect: FunctionComponent<IInputSelectProps> = ({
     children,
     onChange,
     label,
-    useLabel,
-    showLabel,
+    useLabel = true,
+    showLabel = true,
     childrenBehind = true,
+    className,
 }: IInputSelectProps): ReactElement => {
     return (
         <Field
@@ -29,6 +30,7 @@ const InputSelect: FunctionComponent<IInputSelectProps> = ({
             showLabel={showLabel}
             htmlFor={id}
             childrenBehind={childrenBehind}
+            className={className}
         >
             <Select name={name} id={id} value={value} onChange={onChange}>
                 {children}

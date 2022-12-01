@@ -136,7 +136,6 @@ const MenuToggle = ({ className }: IMenuToggleProps) => {
                 checked={menuOpen}
                 onChange={onChange}
             />
-
             <MenuToggleLabel htmlFor={'menu-toggle'} tabIndex={0} onKeyDown={onKeyDown}>
                 <MenuToggleDots>
                     <MenuToggleDotLeft ref={dotLeft} />

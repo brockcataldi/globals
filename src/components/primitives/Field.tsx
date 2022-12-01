@@ -10,6 +10,7 @@ interface IFieldProps {
     showLabel?: boolean
     useLabel?: boolean
     children?: ReactElement | ReactElement[]
+    className?: string
 }
 
 const FieldWrapper = styled.div``
@@ -21,9 +22,10 @@ const Field: FunctionComponent<IFieldProps> = ({
     htmlFor,
     children,
     childrenBehind = true,
+    className,
 }: IFieldProps) => {
     return (
-        <FieldWrapper>
+        <FieldWrapper className={className}>
             {childrenBehind === false && children !== undefined ? children : null}
             {useLabel === true && label !== undefined && htmlFor !== undefined ? (
                 <Label show={showLabel} htmlFor={htmlFor} label={label} />

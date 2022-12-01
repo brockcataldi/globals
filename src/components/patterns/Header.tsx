@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { useLocation } from 'react-router-dom'
+import gsap from 'gsap'
 
 import Text from '../primitives/Text'
-import gsap from 'gsap'
-import MenuToggle from '../elements/MenuToggle'
 import Link from '../primitives/Link'
+import MenuToggle from '../elements/MenuToggle'
+
 import { DownloadIcon } from '../icons/icons'
 
 const HeaderWrapper = styled.header`
@@ -28,6 +29,7 @@ const HeaderWrapper = styled.header`
     visibility: hidden;
     top: 0;
     z-index: 20;
+    pointer-events: auto;
 `
 
 const HeaderActions = styled.div`

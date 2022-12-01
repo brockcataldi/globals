@@ -16,9 +16,10 @@ const InputText = ({
     value,
     onChange,
     label,
-    useLabel,
-    showLabel,
+    useLabel = true,
+    showLabel = true,
     childrenBehind = true,
+    className,
 }: IInputTextProps): ReactElement => {
     return (
         <Field
@@ -27,6 +28,7 @@ const InputText = ({
             showLabel={showLabel}
             htmlFor={id}
             childrenBehind={childrenBehind}
+            className={className}
         >
             <Input type={'text'} name={name} id={id} value={value} onChange={onChange} />
         </Field>

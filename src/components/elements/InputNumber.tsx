@@ -16,9 +16,10 @@ const InputNumber = ({
     value,
     onChange,
     label,
-    useLabel,
-    showLabel,
+    useLabel = true,
+    showLabel = true,
     childrenBehind = true,
+    className,
 }: IInputNumberProps): ReactElement => {
     return (
         <Field
@@ -27,6 +28,7 @@ const InputNumber = ({
             showLabel={showLabel}
             htmlFor={id}
             childrenBehind={childrenBehind}
+            className={className}
         >
             <Input type={'number'} name={name} id={id} value={value} onChange={onChange} />
         </Field>

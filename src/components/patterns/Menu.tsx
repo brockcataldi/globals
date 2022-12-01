@@ -24,6 +24,7 @@ const MenuWrapper = styled.nav`
     opacity: 0;
     visibility: hidden;
     top: 80px;
+    pointer-events: auto;
 `
 const MenuList = styled.ul`
     padding: 0;
