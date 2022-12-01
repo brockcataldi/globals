@@ -11,7 +11,7 @@ const Text = styled.p<ITextProps>`
     ${(props) => {
         return props.show === true || props.show === undefined
             ? `
-			margin: 0;
+			margin: 0 0 0.5rem;
 			display: block;
 			width: 100%;
 			text-transform: ${props.case ? props.case : 'lowercase'};

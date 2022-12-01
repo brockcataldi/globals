@@ -20,6 +20,7 @@ const ScaleWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
+    padding: 2rem 0;
 `
 
 const Scale = ({ id, name, scale, onChange }: IScaleProps) => {

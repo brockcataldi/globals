@@ -3,11 +3,9 @@ import styled from 'styled-components'
 
 import Group from '../primitives/Group'
 import Link from '../primitives/Link'
-import Text from '../primitives/Text'
+// import Text from '../primitives/Text'
 
 interface IRouteHeaderProps {
-    title: string
-
     arrows: boolean
     backTo?: string
     backLabel?: string
@@ -20,7 +18,6 @@ const RouteHeaderWrapper = styled.header`
 `
 
 const RouteHeader = ({
-    title,
     arrows,
     backTo,
     nextTo,
@@ -29,7 +26,6 @@ const RouteHeader = ({
 }: IRouteHeaderProps) => {
     return (
         <RouteHeaderWrapper>
-            <Text as={'h2'}>{title}</Text>
             {arrows === false ? null : (
                 <Group>
                     {backTo === undefined ? null : <Link to={backTo} label={backLabel} />}

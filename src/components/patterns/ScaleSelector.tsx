@@ -22,13 +22,11 @@ interface IScaleSelectorProps {
 }
 
 const ScaleSelectorWrapper = styled.div`
-    padding: 2rem 0;
-
+    padding: 1rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     gap: 1rem;
 `
 

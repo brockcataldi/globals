@@ -6,7 +6,7 @@ import RouteHeader from '../elements/RouteHeader'
 const ExportRoute = (): ReactElement => {
     return (
         <RouteWrapper>
-            <RouteHeader title={'Export'} arrows={false} />
+            <RouteHeader arrows={false} />
         </RouteWrapper>
     )
 }
