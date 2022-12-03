@@ -7,6 +7,7 @@ import IndexRoute from './routes/IndexRoute'
 import TypeViewsRoute from './routes/TypeViewsRoute'
 import TypeScaleRoute from './routes/TypeScaleRoute'
 import ExportRoute from './routes/ExportRoute'
+import SpacingRoute from './routes/SpacingRoute'
 
 const Root = (): ReactElement => {
     return (
@@ -16,6 +17,7 @@ const Root = (): ReactElement => {
                     <Route index element={<IndexRoute />} />
                     <Route path={'type-views'} element={<TypeViewsRoute />} />
                     <Route path={'type-scale'} element={<TypeScaleRoute />} />
+                    <Route path={'spacing'} element={<SpacingRoute />} />
                     <Route path={'export'} element={<ExportRoute />} />
                 </Route>
             </Routes>

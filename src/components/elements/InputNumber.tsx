@@ -7,6 +7,9 @@ interface IInputNumberProps extends IFieldProps {
     id: string
     name: string
     value: number
+    min?: number
+    max?: number
+    step?: number
     onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
@@ -16,6 +19,9 @@ const InputNumber = ({
     value,
     onChange,
     label,
+    min,
+    max,
+    step,
     useLabel = true,
     showLabel = true,
     childrenBehind = true,
@@ -30,7 +36,16 @@ const InputNumber = ({
             childrenBehind={childrenBehind}
             className={className}
         >
-            <Input type={'number'} name={name} id={id} value={value} onChange={onChange} />
+            <Input
+                type={'number'}
+                name={name}
+                id={id}
+                value={value}
+                onChange={onChange}
+                min={min}
+                max={max}
+                step={step}
+            />
         </Field>
     )
 }

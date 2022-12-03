@@ -12,6 +12,7 @@ import IScaleBounds from '../../data/models/IScaleBounds'
 import { PlusIcon } from '../icons/icons'
 
 interface IScaleSelectorProps {
+    type: 'type' | 'spacing'
     id: string
     scale: IScale
     scaleBounds: IScaleBounds
@@ -34,9 +35,11 @@ const ScaleSelectorList = styled.ul`
     margin: 0;
     padding: 0;
     list-style-type: none;
+    width: 100%;
 `
 
 const ScaleSelector = ({
+    type,
     id,
     scale,
     scaleBounds,
@@ -66,10 +69,11 @@ const ScaleSelector = ({
                         checked === false
                             ? ''
                             : scaleIndex >= 0
-                                ? tee(large.indexOf(scaleIndex))
-                                : tee(-1 * (small.indexOf(scaleIndex) + 1))
+                            ? tee(large.indexOf(scaleIndex))
+                            : tee(-1 * (small.indexOf(scaleIndex) + 1))
                     return (
                         <ScaleSelectorItem
+                            type={type}
                             name={name}
                             key={index}
                             index={scaleIndex}

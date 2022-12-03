@@ -5,7 +5,11 @@ import { calculateScaleEntry } from '../../data/utilities'
 
 import IScale from '../../data/models/IScale'
 
-interface IScaleSelectorItemProps {
+interface IScaleSelectorItemDisplayStylesProps {
+    type: 'type' | 'spacing'
+}
+
+interface IScaleSelectorItemProps extends IScaleSelectorItemDisplayStylesProps {
     name: string
     index: number
     id: string
@@ -15,6 +19,8 @@ interface IScaleSelectorItemProps {
 }
 
 const ScaleSelectorItemWrapper = styled.li`
+    width: 100%;
+
     &:not(:last-child) {
         margin: 0 0 1rem 0;
     }
@@ -35,11 +41,10 @@ const ScaleSelectorItemLabel = styled.label`
     align-items: center;
     gap: 2rem;
     cursor: pointer;
-    transition: 100ms background-color ease-in-out, 100ms color ease-in-out;
+    transition: 100ms border-width ease-in-out;
 
     ${ScaleSelectorItemCheckbox}:checked + & {
-        background-color: black;
-        color: white;
+        border-width: 4px;
     }
 `
 
@@ -51,16 +56,30 @@ const ScaleSelectorItemSize = styled.p`
 const ScaleSelectorItemName = styled.p`
     margin: 0;
     text-align: center;
+    font-weight: 700;
 `
 
-const ScaleSelectorItemDisplay = styled.p`
-    white-space: nowrap;
-    width: 100%;
-    overflow: hidden;
+const ScaleSelectorItemDisplay = styled.p<IScaleSelectorItemDisplayStylesProps>`
     margin: 0;
+    display: block;
+
+    ${(props) => {
+        if (props.type == 'spacing') {
+            return `
+                width: 100%;
+                background-color: black;
+            `
+        } else {
+            return `
+                white-space: nowrap;
+                overflow: hidden;
+            `
+        }
+    }}
 `
 
 const ScaleSelectorItem = ({
+    type,
     name,
     id,
     index,
@@ -94,9 +113,17 @@ const ScaleSelectorItem = ({
             >
                 <ScaleSelectorItemName>{name}</ScaleSelectorItemName>
                 <ScaleSelectorItemSize>{size}</ScaleSelectorItemSize>
-                <ScaleSelectorItemDisplay style={{ fontSize: size }}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </ScaleSelectorItemDisplay>
+
+                {type === 'type' ? (
+                    <ScaleSelectorItemDisplay style={{ fontSize: size }} type={type}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </ScaleSelectorItemDisplay>
+                ) : (
+                    <ScaleSelectorItemDisplay
+                        style={{ height: size }}
+                        type={type}
+                    ></ScaleSelectorItemDisplay>
+                )}
             </ScaleSelectorItemLabel>
         </ScaleSelectorItemWrapper>
     )

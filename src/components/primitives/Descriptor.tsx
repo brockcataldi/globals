@@ -19,6 +19,10 @@ const DescriptorWrapper = styled.span`
     gap: 0.5rem;
 `
 
+const DescriptorText = styled(Text)`
+    white-space: nowrap;
+`
+
 const Descriptor = ({
     label,
     showText = true,
@@ -31,9 +35,9 @@ const Descriptor = ({
             {iconAfter === false && icon !== undefined ? (
                 <Icon icon={icon} title={iconTitle}></Icon>
             ) : null}
-            <Text as={'span'} show={showText}>
+            <DescriptorText as={'span'} show={showText}>
                 {label}
-            </Text>
+            </DescriptorText>
             {iconAfter === true && icon !== undefined ? (
                 <Icon icon={icon} title={iconTitle}></Icon>
             ) : null}

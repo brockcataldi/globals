@@ -9,6 +9,10 @@ import { menuOpenAtom } from '../../data/store'
 
 import Link from '../primitives/Link'
 
+interface IMenuLinkStylesProps {
+    selected: boolean
+}
+
 const MenuWrapper = styled.nav`
     position: relative;
     border-radius: 0.5rem;
@@ -38,6 +42,17 @@ const MenuList = styled.ul`
 `
 
 const MenuItem = styled.li``
+
+const MenuLink = styled(Link)<IMenuLinkStylesProps>`
+    ${(props) => {
+        if (props.selected === true) {
+            return `
+                background-color: black;
+                color: white;
+            `
+        }
+    }}
+`
 
 const Menu = () => {
     const location = useLocation()
@@ -71,7 +86,11 @@ const Menu = () => {
                 {WORKSPACE_ROUTES.map((WORKSPACE_ROUTE, index) => {
                     return (
                         <MenuItem key={index}>
-                            <Link to={WORKSPACE_ROUTE.link} label={WORKSPACE_ROUTE.text} />
+                            <MenuLink
+                                selected={location.pathname === WORKSPACE_ROUTE.link}
+                                to={WORKSPACE_ROUTE.link}
+                                label={WORKSPACE_ROUTE.text}
+                            />
                         </MenuItem>
                     )
                 })}

@@ -1,35 +1,39 @@
 import { atom } from 'recoil'
 
-import IScale from './models/IScale'
-import IScaleBounds from './models/IScaleBounds'
+import {
+    marginScaleAtom,
+    marginScaleBoundsAtom,
+    marginScaleSelectionsAtom,
+} from './atoms/marginScale'
 
-const menuOpenAtom = atom({
+import {
+    paddingScaleAtom,
+    paddingScaleBoundsAtom,
+    paddingScaleSelectionsAtom,
+} from './atoms/paddingScale'
+
+import { typeScaleAtom, typeScaleBoundsAtom, typeScaleSelectionsAtom } from './atoms/typeScale'
+
+const menuOpenAtom = atom<boolean>({
     key: 'menuOpenAtom',
     default: false,
 })
 
-const typeScaleAtom = atom<IScale>({
-    key: 'typeScale',
-    default: {
-        base: {
-            value: 16,
-            suffix: 'px',
-        },
-        ratio: 1.2,
-    },
+const spacingScalesAtom = atom<string>({
+    key: 'spacingScalesAtom',
+    default: 'shared',
 })
 
-const typeScaleBoundsAtom = atom<IScaleBounds>({
-    key: 'typeScaleBounds',
-    default: {
-        upper: 6,
-        lower: -1,
-    },
-})
-
-const typeScaleSelectionsAtom = atom<number[]>({
-    key: 'typeScaleSelections',
-    default: [0],
-})
-
-export { menuOpenAtom, typeScaleAtom, typeScaleBoundsAtom, typeScaleSelectionsAtom }
+export {
+    menuOpenAtom,
+    spacingScalesAtom,
+    typeScaleAtom,
+    typeScaleBoundsAtom,
+    typeScaleSelectionsAtom,
+    marginScaleAtom,
+    marginScaleBoundsAtom,
+    marginScaleSelectionsAtom,
+    paddingScaleAtom,
+    paddingScaleBoundsAtom,
+    paddingScaleSelectionsAtom,
+}

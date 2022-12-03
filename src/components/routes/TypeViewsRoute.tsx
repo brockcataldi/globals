@@ -6,7 +6,7 @@ import RouteHeader from '../elements/RouteHeader'
 const TypeViewsRoute = (): ReactElement => {
     return (
         <RouteWrapper>
-            <RouteHeader arrows={true} />
+            <RouteHeader title={'Type Views'} arrows={true} />
         </RouteWrapper>
     )
 }

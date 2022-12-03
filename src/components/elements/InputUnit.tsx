@@ -64,6 +64,8 @@ const InputUnit = ({ id, title, value, onChange }: IInputUnit) => {
                 name={`scale-value-${id}`}
                 label={'Unit Value'}
                 showLabel={false}
+                min={0}
+                step={value.suffix === 'px' ? 1 : 0.1}
             />
             <InputUnitInputSelect
                 value={value.suffix}

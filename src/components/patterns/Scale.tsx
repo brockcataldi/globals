@@ -20,7 +20,6 @@ const ScaleWrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    padding: 2rem 0;
 `
 
 const Scale = ({ id, name, scale, onChange }: IScaleProps) => {
@@ -73,6 +72,7 @@ const Scale = ({ id, name, scale, onChange }: IScaleProps) => {
                     label={'Custom Ratio'}
                     showLabel={true}
                     useLabel={true}
+                    min={0}
                     value={scale.ratio}
                     onChange={onChangeCustomRatio}
                 />

@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react'
 
-import RouteWrapper from '../elements/RouteWrapper'
 import RouteHeader from '../elements/RouteHeader'
+import RouteWrapper from '../elements/RouteWrapper'
 
 const ExportRoute = (): ReactElement => {
     return (
         <RouteWrapper>
-            <RouteHeader arrows={false} />
+            <RouteHeader title={'Export'} arrows={false} />
         </RouteWrapper>
     )
 }
