@@ -7,7 +7,7 @@ import Text from '../primitives/Text'
 import Link from '../primitives/Link'
 import MenuToggle from '../elements/MenuToggle'
 
-import { DownloadIcon } from '../icons/icons'
+import { DownloadIcon } from '../vectors/vectors'
 
 const HeaderWrapper = styled.header`
     padding: 1rem;

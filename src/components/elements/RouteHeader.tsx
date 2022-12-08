@@ -8,7 +8,7 @@ import Group from '../primitives/Group'
 import Link from '../primitives/Link'
 import Text from '../primitives/Text'
 
-import { ArrowRightIcon, ArrowLeftIcon } from '../icons/icons'
+import { ArrowRightIcon, ArrowLeftIcon } from '../vectors/vectors'
 
 interface IRouteHeaderProps {
     arrows: boolean

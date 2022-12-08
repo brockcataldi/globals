@@ -6,8 +6,8 @@ import App from './App'
 import IndexRoute from './routes/IndexRoute'
 import TypeViewsRoute from './routes/TypeViewsRoute'
 import TypeScaleRoute from './routes/TypeScaleRoute'
-import ExportRoute from './routes/ExportRoute'
 import SpacingRoute from './routes/SpacingRoute'
+import ExportRoute from './routes/ExportRoute'
 
 const Root = (): ReactElement => {
     return (

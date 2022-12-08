@@ -6,9 +6,9 @@ import InputSelect from './InputSelect'
 
 import Input from '../primitives/Input'
 import Select from '../primitives/Select'
+import Text from '../primitives/Text'
 
 import IUnit from '../../data/models/IUnit'
-import Text from '../primitives/Text'
 
 interface IInputUnit {
     id: string

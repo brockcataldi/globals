@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import styled from 'styled-components'
-import { PlusIcon } from '../icons/icons'
+import { PlusIcon } from '../vectors/vectors'
 
 import Text from '../primitives/Text'
 import Link from '../primitives/Link'

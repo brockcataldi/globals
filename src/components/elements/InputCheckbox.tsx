@@ -5,7 +5,7 @@ import Field, { IFieldProps } from '../primitives/Field'
 import { LabelElement } from '../primitives/Label'
 import Input from '../primitives/Input'
 
-interface IInputRadioProps extends IFieldProps {
+interface IInputCheckboxProps extends IFieldProps {
     id: string
     name: string
     value: string
@@ -13,11 +13,11 @@ interface IInputRadioProps extends IFieldProps {
     onChange: (value: string) => void
 }
 
-const InputRadioInput = styled(Input)`
+const InputCheckboxInput = styled(Input)`
     display: none;
 `
 
-const InputRadioField = styled(Field)`
+const InputCheckboxField = styled(Field)`
     ${LabelElement} {
         padding: 0 0.5rem;
         height: 36px;
@@ -28,13 +28,13 @@ const InputRadioField = styled(Field)`
         cursor: pointer;
     }
 
-    ${InputRadioInput}:checked + ${LabelElement} {
+    ${InputCheckboxInput}:checked + ${LabelElement} {
         color: white;
         background-color: black;
     }
 `
 
-const InputRadio = ({
+const InputCheckbox = ({
     label,
     id,
     name,
@@ -45,7 +45,7 @@ const InputRadio = ({
     icon,
     iconAfter,
     iconTitle,
-}: IInputRadioProps) => {
+}: IInputCheckboxProps) => {
     const handleChange = () => {
         onChange(value)
     }
@@ -57,7 +57,7 @@ const InputRadio = ({
     }
 
     return (
-        <InputRadioField
+        <InputCheckboxField
             label={label}
             useLabel={true}
             showLabel={true}
@@ -68,8 +68,8 @@ const InputRadio = ({
             iconAfter={iconAfter}
             iconTitle={iconTitle}
         >
-            <InputRadioInput
-                type={'radio'}
+            <InputCheckboxInput
+                type={'checkbox'}
                 name={name}
                 id={id}
                 value={value}
@@ -78,9 +78,9 @@ const InputRadio = ({
                 checked={checked}
                 tabIndex={0}
             />
-        </InputRadioField>
+        </InputCheckboxField>
     )
 }
 
-export type { IInputRadioProps }
-export default InputRadio
+export type { IInputCheckboxProps }
+export default InputCheckbox

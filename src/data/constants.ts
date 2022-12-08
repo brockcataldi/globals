@@ -13,6 +13,10 @@ const WORKSPACE_ROUTES = [
         link: '/spacing',
         text: 'Spacing',
     },
+    {
+        link: '/export',
+        text: 'Export',
+    },
 ]
 
 export { SCALE_RATIOS, WORKSPACE_ROUTES }

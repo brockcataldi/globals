@@ -4,12 +4,12 @@ import styled from 'styled-components'
 import ScaleSelectorItem from './ScaleSelectorItem'
 import Button from '../primitives/Button'
 
-import { between, tee } from '../../data/utilities'
+import { between, nameScaleEntry } from '../../data/utilities'
 
 import IScale from '../../data/models/IScale'
 import IScaleBounds from '../../data/models/IScaleBounds'
 
-import { PlusIcon } from '../icons/icons'
+import { PlusIcon } from '../vectors/vectors'
 
 interface IScaleSelectorProps {
     type: 'type' | 'spacing'
@@ -50,9 +50,6 @@ const ScaleSelector = ({
 }: IScaleSelectorProps) => {
     const { upper, lower } = scaleBounds
 
-    const large = [...scaleSelections].filter((value) => value >= 0).sort((a, b) => a - b)
-    const small = [...scaleSelections].filter((value) => value < 0).sort((a, b) => b - a)
-
     return (
         <ScaleSelectorWrapper>
             <Button
@@ -65,16 +62,15 @@ const ScaleSelector = ({
             <ScaleSelectorList>
                 {between(upper, lower).map((scaleIndex: number, index: number) => {
                     const checked = scaleSelections.includes(scaleIndex)
-                    const name =
-                        checked === false
-                            ? ''
-                            : scaleIndex >= 0
-                            ? tee(large.indexOf(scaleIndex))
-                            : tee(-1 * (small.indexOf(scaleIndex) + 1))
+
                     return (
                         <ScaleSelectorItem
                             type={type}
-                            name={name}
+                            name={
+                                checked === false
+                                    ? ''
+                                    : nameScaleEntry(scaleIndex, scaleSelections, 'tee')
+                            }
                             key={index}
                             index={scaleIndex}
                             id={id}

@@ -17,7 +17,7 @@ import RouteHeader from '../elements/RouteHeader'
 import RouteWrapper from '../elements/RouteWrapper'
 import Group from '../primitives/Group'
 
-import { LockIcon, UnlockIcon } from '../icons/icons'
+import { LockIcon, UnlockIcon } from '../vectors/vectors'
 
 const SpacingRoute = () => {
     const [spacingScales, setSpacingScales] = useRecoilState(spacingScalesAtom)
