@@ -1,5 +1,6 @@
 import { ChangeEvent, ReactElement } from 'react'
 import InputSelect from './InputSelect'
+import { FONT_STYLES } from '../../data/constants'
 
 interface IInputFontStyleProps {
     id: string
@@ -11,8 +12,6 @@ interface IInputFontStyleProps {
     value: string
     onChange: (event: ChangeEvent<HTMLSelectElement>) => void
 }
-
-const FONT_STYLES = ['normal', 'italic', 'oblique']
 
 const InputFontStyle = ({
     id,

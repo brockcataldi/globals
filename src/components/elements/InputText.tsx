@@ -35,4 +35,5 @@ const InputText = ({
     )
 }
 
+export type { IInputTextProps }
 export default InputText

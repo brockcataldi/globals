@@ -84,3 +84,4 @@ const InputCheckbox = ({
 
 export type { IInputCheckboxProps }
 export default InputCheckbox
+export { InputCheckboxInput, InputCheckboxField }

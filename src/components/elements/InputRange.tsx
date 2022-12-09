@@ -49,4 +49,5 @@ const InputRange = ({
     )
 }
 
+export type { IInputRangeProps }
 export default InputRange

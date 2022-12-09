@@ -10,7 +10,7 @@ import Text from '../primitives/Text'
 
 import IUnit from '../../data/models/IUnit'
 
-interface IInputUnit {
+interface IInputUnitProps {
     id: string
     title: string
     value: IUnit
@@ -45,7 +45,7 @@ const InputUnitWrapper = styled.div`
     grid-template-columns: 1fr 64px;
 `
 
-const InputUnit = ({ id, title, value, onChange }: IInputUnit) => {
+const InputUnit = ({ id, title, value, onChange }: IInputUnitProps) => {
     const onChangeValue = (event: ChangeEvent<HTMLInputElement>) => {
         onChange({ ...value, value: Number(event.target.value) })
     }
@@ -83,4 +83,6 @@ const InputUnit = ({ id, title, value, onChange }: IInputUnit) => {
     )
 }
 
+export type { IInputUnitProps }
 export default InputUnit
+export { InputUnitWrapper, InputUnitTitle, InputUnitInputSelect, InputUnitInputNumber }

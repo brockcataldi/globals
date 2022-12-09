@@ -84,3 +84,4 @@ const InputRadio = ({
 
 export type { IInputRadioProps }
 export default InputRadio
+export { InputRadioField, InputRadioInput }

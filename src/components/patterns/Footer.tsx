@@ -41,7 +41,7 @@ const Footer = () => {
             <FooterContent>
                 <FooterImprintWrapper>
                     <FooterImprintText as={'span'}>Created out of spite by</FooterImprintText>
-                    <FooterLink>
+                    <FooterLink href={'https://example.com'} target={'_blank'}>
                         <FooterSignature />
                         <Text as={'span'} show={false}>
                             Brock
@@ -54,3 +54,11 @@ const Footer = () => {
 }
 
 export default Footer
+export {
+    FooterWrapper,
+    FooterContent,
+    FooterImprintWrapper,
+    FooterImprintText,
+    FooterLink,
+    FooterSignature,
+}

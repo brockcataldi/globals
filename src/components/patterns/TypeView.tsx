@@ -161,4 +161,6 @@ const TypeView = ({ id, index, typeView, onChange, onCopy, onDelete }: ITypeView
     )
 }
 
+export type { ITypeViewProps }
 export default TypeView
+export { TypeViewWrapper, TypeViewRow, TypeViewDisplay }

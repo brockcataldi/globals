@@ -39,4 +39,5 @@ const InputSelect: FunctionComponent<IInputSelectProps> = ({
     )
 }
 
+export type { IInputSelectProps }
 export default InputSelect

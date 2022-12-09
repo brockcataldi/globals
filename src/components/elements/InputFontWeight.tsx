@@ -1,6 +1,8 @@
 import { ChangeEvent, ReactElement } from 'react'
 import InputSelect from './InputSelect'
 
+import { FONT_WEIGHTS } from '../../data/constants'
+
 interface IInputFontWeightProps {
     id: string
     name: string
@@ -11,22 +13,6 @@ interface IInputFontWeightProps {
     value: string
     onChange: (event: ChangeEvent<HTMLSelectElement>) => void
 }
-
-const FONT_WEIGHTS = [
-    'normal',
-    'bold',
-    'bolder',
-    'lighter',
-    '100',
-    '200',
-    '300',
-    '400',
-    '500',
-    '600',
-    '700',
-    '800',
-    '900',
-]
 
 const InputFontWeight = ({
     id,

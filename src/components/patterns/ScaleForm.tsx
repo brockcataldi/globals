@@ -62,4 +62,5 @@ const ScaleForm = ({
     )
 }
 
+export type { IScaleFormProps }
 export default ScaleForm

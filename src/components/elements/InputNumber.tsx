@@ -50,4 +50,5 @@ const InputNumber = ({
     )
 }
 
+export type { IInputNumberProps }
 export default InputNumber

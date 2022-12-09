@@ -2,11 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { useRecoilState } from 'recoil'
 
-import TypeView from './TypeView'
-
 import { typeViewsAtom } from '../../data/store'
-
 import ITypeView from '../../data/models/ITypeView'
+
+import TypeView from './TypeView'
 import Button from '../primitives/Button'
 import { PlusIcon } from '../vectors/vectors'
 
@@ -74,3 +73,4 @@ const TypeViews = () => {
 }
 
 export default TypeViews
+export { TypeViewsWrapper }

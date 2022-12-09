@@ -58,3 +58,4 @@ const Externals = () => {
 }
 
 export default Externals
+export { ExternalsWrapper }

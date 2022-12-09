@@ -100,3 +100,4 @@ const Menu = () => {
 }
 
 export default Menu
+export { MenuWrapper, MenuList, MenuItem, MenuLink }

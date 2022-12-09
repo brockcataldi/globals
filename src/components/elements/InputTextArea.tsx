@@ -43,4 +43,5 @@ const InputTextArea = ({
     )
 }
 
+export type { IInputTextProps }
 export default InputTextArea

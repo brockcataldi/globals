@@ -1,5 +1,6 @@
 import { ChangeEvent, ReactElement } from 'react'
 import InputSelect from './InputSelect'
+import { FONT_VARIANTS } from '../../data/constants'
 
 interface IInputFontVariantProps {
     id: string
@@ -11,8 +12,6 @@ interface IInputFontVariantProps {
     value: string
     onChange: (event: ChangeEvent<HTMLSelectElement>) => void
 }
-
-const FONT_VARIANTS = ['normal', 'small-caps']
 
 const InputFontVariant = ({
     id,

@@ -16,7 +16,6 @@ const IndexRouteWrapper = styled.div`
     box-sizing: border-box;
     padding: 1rem;
     position: relative;
-    
 `
 
 const IndexTitle = styled(Text)`
